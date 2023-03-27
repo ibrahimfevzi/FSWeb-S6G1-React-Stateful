@@ -46,7 +46,7 @@ export default function Input() {
     const { value } = evt.target;
 
     /* ADIM 4 */
-    setInputDeğeri(value);
+    setInputDeğeri(value); //
   };
   const reset = () => {
     /* ADIM 5 */

@@ -33,7 +33,7 @@ export default function Programcilar() {
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
 
   const oneCikaninIsmi = () => {
-    // Bunu sona bırakın!
+    // Bunu sona bırakın! //
     // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
     // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
     // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın
