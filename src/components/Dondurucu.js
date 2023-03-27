@@ -52,7 +52,7 @@ export default function Dondurucu() {
       <h2>Döndürücü</h2>
       {
         dondurucuAcik && (
-          <div id="dondurucu" className="spinner">
+          <div id="döndürücü" className="spinner">
             --+--
           </div>
         ) /* ADIM 2 */

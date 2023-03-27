@@ -25770,7 +25770,7 @@ if ("development" === 'production') {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Sayac;
+exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -25786,14 +25786,10 @@ function Sayac() {
     sayici = _useState2[0],
     setSayici = _useState2[1];
   var artirici = function artirici() {
-    setSayici(function (prevSayici) {
-      return prevSayici + 1;
-    });
+    setSayici(sayici + 1);
   };
   var azaltici = function azaltici() {
-    setSayici(function (prevSayici) {
-      return prevSayici - 1;
-    });
+    setSayici(sayici - 1);
   };
   var reset = function reset() {
     setSayici(0);
@@ -25808,7 +25804,7 @@ function Sayac() {
   }, /*#__PURE__*/_react.default.createElement("h2", null, "Saya\xE7"), /*#__PURE__*/_react.default.createElement("div", {
     id: "sayici",
     style: stil
-  }, "Say\u0131 ", sayici % 2 === 0 ? "çift" : "tek", ": ", sayici), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+  }, "Say\u0131", sayici, sayici % 2 === 0 ? "çift" : "tek"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
     id: "artirici",
     onClick: artirici
   }, "Art\u0131r\u0131c\u0131"), /*#__PURE__*/_react.default.createElement("button", {
@@ -25819,6 +25815,8 @@ function Sayac() {
     onClick: reset
   }, "Reset")));
 }
+var _default = Sayac;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"components/Input.js":[function(require,module,exports) {
 "use strict";
 
@@ -25847,8 +25845,9 @@ function Input() {
     var value = evt.target.value;
 
     /* ADIM 4 */
-    setInputDeğeri(value);
+    setInputDeğeri(value); //
   };
+
   var reset = function reset() {
     /* ADIM 5 */
     setInputDeğeri("");
@@ -25856,7 +25855,7 @@ function Input() {
   var stil = {
     fontSize: "1.5em",
     marginBottom: "0.3em",
-    color: inputDeğeri.length > 9 ? "crimson" : "royalblue" /* ADIM 2 */
+    color: inputDeğeri.length > 10 ? "crimson" : "royalblue" /* ADIM 2 */
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -25957,7 +25956,7 @@ function Dondurucu() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "widget-spinner container"
   }, /*#__PURE__*/_react.default.createElement("h2", null, "D\xF6nd\xFCr\xFCc\xFC"), dondurucuAcik && /*#__PURE__*/_react.default.createElement("div", {
-    id: "dondurucu",
+    id: "d\xF6nd\xFCr\xFCc\xFC",
     className: "spinner"
   }, "--+--") /* ADIM 2 */, /*#__PURE__*/_react.default.createElement("button", {
     id: "toggleDondurucu",
@@ -26004,8 +26003,9 @@ function Kareler() {
     // Eğer argüman olarak verilen id aktif kare state'indeki id ile eşleşirse, class adı 'active' olan bir string döndürecek
     // diğer durumlar için boş döndürecek.
     // Etkisini görmek için kareye sağ tıklayın ve "öğeyi inceleyin".
-    return aktifKare == id ? "active" : "";
+    return aktifKare == id ? "active" : ""; //
   };
+
   var AktifEt = function AktifEt(id) {
     // Bu bir _satır içinden çağırılmış_ click handler yardımcısıdır.
     // id bağımsız değişkenini, stateteki aktif id olacak şekilde ayarlayın
@@ -26127,7 +26127,7 @@ function Programcilar() {
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
 
   var oneCikaninIsmi = function oneCikaninIsmi() {
-    // Bunu sona bırakın!
+    // Bunu sona bırakın! //
     // Bu bir event handler değil, yardımcıdır. Kullanımını JSX'te gözlemleyin.
     // Öne çıkan geliştiricinin _isim_ adını döndürmek için her iki state dilimini kullanacak.
     // Closureların güzelliği, argümanlar yoluyla bilgi enjekte etmeye gerek kalmadan programın
@@ -26212,7 +26212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59191" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49465" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

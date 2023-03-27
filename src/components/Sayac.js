@@ -48,14 +48,14 @@ ADIM 6:
 import React from "react"; /* ADIM 0 buraya*/ //
 import { useState } from "react";
 
-export default function Sayac() {
+function Sayac() {
   const [sayici, setSayici] = useState(0);
 
   const artirici = () => {
-    setSayici((prevSayici) => prevSayici + 1);
+    setSayici(sayici + 1);
   };
   const azaltici = () => {
-    setSayici((prevSayici) => prevSayici - 1);
+    setSayici(sayici - 1);
   };
   const reset = () => {
     setSayici(0);
@@ -71,7 +71,8 @@ export default function Sayac() {
     <div className="widget-counter container">
       <h2>Sayaç</h2>
       <div id="sayici" style={stil}>
-        Sayı {sayici % 2 === 0 ? "çift" : "tek"}: {sayici}
+        Sayı{sayici}
+        {sayici % 2 === 0 ? "çift" : "tek"}
       </div>
       <div>
         <button id="artirici" onClick={artirici}>
@@ -87,3 +88,5 @@ export default function Sayac() {
     </div>
   );
 }
+
+export default Sayac;

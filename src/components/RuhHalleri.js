@@ -59,7 +59,7 @@ export default function RuhHalleri() {
       <div id="ruhHali" style={stil}>
         {ruhHali}
       </div>{" "}
-      {/* ADIM 3 */} //
+      {/* ADIM 3 */}
       <div>
         <button id="mutluEt" onClick={mutluEt}>
           Mutlu Et
